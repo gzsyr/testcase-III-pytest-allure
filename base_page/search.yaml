@@ -1,0 +1,9 @@
+action_search:
+  - by: id
+    locator: edit_search_query
+    action: send
+    value: "滨江雅园"
+
+  - by: id
+    action: press
+    value: KEYCODE_ENTER

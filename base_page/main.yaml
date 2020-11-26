@@ -1,0 +1,14 @@
+goto_all_house:
+  - by: xpath
+    locator: "//*[@text='全部']"
+    action: click
+
+goto_search:
+  - by: id
+    locator: "tv_index_search"
+    action: click
+
+goto_my:
+  - by: id
+    locator: "/my_image"
+    action: click
