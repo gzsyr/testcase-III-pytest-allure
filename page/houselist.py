@@ -1,7 +1,7 @@
 from appium.webdriver.common.mobileby import MobileBy
 
-from base_page.base_page import BasePage
-from base_page.housedetail import HouseDetail
+from page.base_page import BasePage
+from page.housedetail import HouseDetail
 
 
 class HouseList(BasePage):

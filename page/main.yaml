@@ -1,0 +1,76 @@
+# 点击横幅广告
+goto_adv:
+  - by: id
+    locator: cbLoopViewPager
+    action: click
+
+# 点击全部
+goto_all_house:
+  - by: xpath
+    locator: "//*[@text='全部']"
+    action: click
+
+# 点击住宅
+goto_zz_house:
+  - by: xpath
+    locator: "//*[@text='住宅']"
+    action: click
+
+# 点击商业
+goto_sy_house:
+  - by: xpath
+    locator: "//*[@text='商业']"
+    action: click
+
+# 点击公寓
+goto_gy_house:
+  - by: xpath
+    locator: "//*[@text='公寓']"
+    action: click
+
+# 点击智能推荐右侧的设置
+goto_setting:
+  - by: id
+    locator: tv_index_recommend_setting
+    action: click
+
+# 点击智能推荐第一个房源
+goto_recommend_first_house:
+  - by: id
+    locator: iv_house_recommend_image
+    action: click
+
+# 点击搜索框
+goto_search:
+  - by: id
+    locator: "tv_index_search"
+    action: click
+
+# 滑动到精选推荐列表
+swipe_to_list:
+  - action: swipe
+    value: rv_index_house
+
+# 点击最新上架
+click_tab_new:
+  - by: xpath
+    locator: '//*[@text="最新上架"]'
+    action: click
+
+# 点击热门报备
+click_tab_hot:
+  - by: xpath
+    locator: '//*[@text="热门报备"]'
+    action: click
+
+# 点击综合排序
+click_tab_all:
+  - by: xpath
+    locator: '//*[@text="综合排序"]'
+    action: click
+
+# 点击“我的”
+goto_my:
+  - by: id
+    locator: "/my_image"
+    action: click

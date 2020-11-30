@@ -1,0 +1,63 @@
+# 点击沟通
+goto_connect:
+  - by: id
+    locator: tv_detail_tel
+    action: click
+
+# 点击报备
+goto_report:
+  - by: xpath
+    locator: '//*[@text="报备"]'
+    action: click
+
+# 点击收藏
+goto_collect:
+  - by: id
+    locator: iv_housedetail_collect
+    action: click
+
+# 点击海报
+goto_post:
+  - by: xpath
+    locator: '//*[@text="海报"]'
+    action: click
+
+# 点击相册
+goto_photo:
+  - by: id
+    locator: tv_housedetail_imagecount
+    action: click
+
+# 点击地址
+goto_address:
+  - by: id
+    locator: layout_housedetail_address
+    action: click
+
+# 点击“项目详情”tab
+goto_project_detail:
+  - by: xpath
+    locator: '//*[@text="项目详情"]'
+    action: click
+
+# 点击分享
+goto_share:
+  - by: id
+    locator: ib_nav_right
+    action: click
+
+# 滑动到页面底部
+#scroll_to_buttom:
+#  - action: swipe
+#    value: "buttom"
+
+# 滑动到项目详情TAB下面的“更多”
+project_detail_more:
+  - action: swipe
+    value: "更多项目信息"
+
+# 点击项目详情页面TAB下面的“更多”
+goto_more_project_detail:
+  - by: xpath
+    locator: '//*[@text="更多项目信息"]'
+    action: click

@@ -1,7 +1,7 @@
 from appium import webdriver
 
-from base_page.base_page import BasePage
-from base_page.main import Main
+from page.base_page import BasePage
+from page.main import Main
 
 
 class App(BasePage):
@@ -19,12 +19,14 @@ class App(BasePage):
             caps["appPackage"] = self._package
             caps["appActivity"] = self._activity
             caps["noReset"] = True
+            caps["unicodeKeyboard"] = True
+            caps["resetKeyboard"] = True
 
             self._driver = webdriver.Remote("http://localhost:4723/wd/hub", caps)
         else:
             self._driver.start_activity(self._package, self._activity)
 
-        self._driver.implicitly_wait(10)
+        self.set_implicity(10)
         print("app -> start")
         return self
 

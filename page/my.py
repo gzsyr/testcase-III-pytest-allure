@@ -1,4 +1,4 @@
-from base_page.base_page import BasePage
+from page.base_page import BasePage
 
 
 class My(BasePage):

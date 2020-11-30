@@ -1,0 +1,14 @@
+action_search:
+  - by: id
+    locator: edit_search_query
+    action: send
+    value: "${house_name}"
+#
+#  - by: id
+#    action: press
+#    value: KEYCODE_ENTER
+
+select_search_result:
+  - by: xpath
+    locator: '//*[contains(@resource-id,"iv_image")]/..//*[@text="${house_name}"]'
+    action: click
