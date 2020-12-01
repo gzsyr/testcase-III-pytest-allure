@@ -1,0 +1,41 @@
+# 点击“个人资料”
+goto_personal:
+  - by: xpath
+    locator: '//*[@text="个人资料"]'
+    action: click
+
+# 点击“修改手机”
+goto_change_phone:
+  - by: xpath
+    locator: '//*[@text="修改手机"]'
+    action: click
+
+# 点击“修改密码”
+goto_change_pw:
+  - by: xpath
+    locator: '//*[@text="修改密码"]'
+    action: click
+
+# 点击“偏好设置”
+goto_fav_setting:
+  - by: xpath
+    locator: '//*[@text="偏好设置"]'
+    action: click
+
+# 点击“清理缓存”
+goto_clean_cache:
+  - by: xpath
+    locator: '//*[@text="清理缓存"]'
+    action: click
+
+# 点击“意见反馈”
+goto_feedback:
+  - by: xpath
+    locator: '//*[@text="意见反馈"]'
+    action: click
+
+# 点击“关于”
+goto_about:
+  - by: xpath
+    locator: '//*[@text="关于"]'
+    action: click

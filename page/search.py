@@ -11,6 +11,7 @@ class Search(BasePage):
         with allure.step("输入搜索关键词: " + self._params["house_name"]):
             self.steps("../page/search.yaml", replace=True)
 
+        # 切换输入法，使用键盘的“搜索”键
         self.adbshell('adb shell ime set com.sohu.inputmethod.sogou/.SogouIME')
         self.tsleep(3)
         self._driver.press_keycode('66')        # os.system("adb shell input keyevent 66")

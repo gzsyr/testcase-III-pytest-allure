@@ -29,7 +29,7 @@ goto_gy_house:
     action: click
 
 # 点击智能推荐右侧的设置
-goto_setting:
+goto_fav_setting:
   - by: id
     locator: tv_index_recommend_setting
     action: click
@@ -72,5 +72,23 @@ click_tab_all:
 # 点击“我的”
 goto_my:
   - by: id
-    locator: "/my_image"
+    locator: 'my_image'
+    action: click
+
+# 点击“客户”
+goto_custom:
+  - by: id
+    locator: 'fav_image'
+    action: click
+
+# 点击“消息”
+goto_message:
+  - by: id
+    locator: 'message_image'
+    action: click
+
+# 点击“首页”
+goto_index:
+  - by: id
+    locator: 'index_image'
     action: click

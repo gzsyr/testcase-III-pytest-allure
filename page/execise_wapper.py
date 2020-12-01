@@ -1,10 +1,15 @@
 import logging
 
-import allure
 from appium.webdriver.common.mobileby import MobileBy
 
 
 def handle_black(func):
+    """
+    解释器
+    查找元素时，处理异常弹框
+    :param func:
+    :return:
+    """
     logging.basicConfig(level=logging.INFO)
 
     def wapper(*args, **kwargs):

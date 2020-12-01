@@ -10,6 +10,10 @@ class App(BasePage):
     _activity = "com.house365.xinfangbao.ui.activity.SplashActivity"
 
     def start(self):
+        """
+        执行appium连接设备
+        :return:self
+        """
         if self._driver is None:
             caps = {}
             caps["platformName"] = "android"
@@ -23,12 +27,44 @@ class App(BasePage):
             caps["resetKeyboard"] = True
 
             self._driver = webdriver.Remote("http://localhost:4723/wd/hub", caps)
+            print("driver is none, 重新建立driver")
         else:
-            self._driver.start_activity(self._package, self._activity)
+            # self._driver.start_activity(self._package, self._activity)
+            self._driver.launch_app()
+            print("driver is OK, 不需要重新建立driver")
 
         self.set_implicity(10)
         print("app -> start")
         return self
+
+    def stop(self):
+        """
+        关闭连接
+        :return:self
+        """
+        if self._driver is not None:
+            self._driver.quit()
+
+    def openapp(self):
+        """
+        打开执行的app
+        :return:self
+        """
+        if self._driver is not None:
+            self._driver.launch_app()
+            print("openapp: 执行launch_app")
+        else:
+            self.start()
+
+        return self
+
+    def closeapp(self):
+        """
+        关闭执行的app
+        :return:self
+        """
+        if self._driver is not None:
+            self._driver.close_app()
 
     def main(self) -> Main:
         print("app -> main")

@@ -10,8 +10,9 @@ if __name__ == "__main__":
                  "-s",
                  "--show-capture=all",
                  "--alluredir", "./result",  ##"--html=testreport.html", "--self-contained-html",
-                 #"./test_house_detail.py",
-                 "./test_main.py",
+                 # "./test_house_detail.py",
+                 # "./test_main.py::TestMain::test_goto_my",
+                 "-m hello"
                  ])
 
     # os.system(r"allure generate --clean result -o ./report")

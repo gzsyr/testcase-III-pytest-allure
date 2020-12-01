@@ -1,0 +1,89 @@
+# 点击头像
+click_photo:
+  - by: id
+    locator: my_avatar
+    action: click
+
+# 点击“设置”
+goto_setting:
+  - by: id
+    locator: iv_setting
+    action: click
+
+# 点击“客户数”
+goto_my_customer:
+  - by: id
+    locator: layout_data_1
+    action: click
+
+# 点击“成交额”
+goto_deal_num:
+  - by: id
+    locator: layout_data_3
+    action: click
+
+# 点击“签约量”
+goto_sign_num:
+  - by: id
+    locator: layout_data_2
+    action: click
+
+# 点击“我的店铺”
+goto_my_shop:
+  - by: xpath
+    locator: '//*[@text="我的店铺"]'
+    action: click
+
+# 点击“我的关注“
+goto_my_favourite:
+  - by: xpath
+    locator: '//*[@text="我的关注"]'
+    action: click
+
+# 点击“认证”
+goto_authentication:
+  - by: xpath
+    locator: '//*[@text="认证"]'
+    - action: click
+
+# 点击“认证”
+goto_coupon:
+  - by: xpath
+    locator: '//*[@text="带看券"]'
+    action: click
+
+# 点击“贷款计算器”
+goto_loan_cal:
+  - by: xpath
+    locator: '//*[@text="贷款计算"]'
+    action: click
+
+# 点击“税费计算器”
+goto_taxes_cal:
+  - by: xpath
+    locator: '//*[@text="税费计算"]'
+    action: click
+
+# 点击“购房资格”
+goto_buyhouse:
+  - by: xpath
+    locator: '//*[@text="购房资格"]'
+    action: click
+
+# 点击“通讯录”
+goto_address_book:
+  - by: xpath
+    locator: '//*[@text="通讯录"]'
+    action: click
+
+# 点击“门店入驻”
+goto_shop_entry:
+  - by: xpath
+    locator: '//*[@text="门店入驻"]'
+    action: click
+
+# 点击“项目合作”
+goto_cooperation:
+  - by: xpath
+    locator: '//*[@text="项目合作"]'
+    action: click

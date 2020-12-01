@@ -2,10 +2,13 @@ import allure
 import pytest
 import yaml
 
+from page.app import App
 from test_case.test_base import TestBase
 
 
 class TestMain(TestBase):
+
+    # shouye = App().start().main()
 
     @allure.description("进入横幅广告页面")
     def test_click_adv(self):
@@ -28,8 +31,9 @@ class TestMain(TestBase):
         self.shouye.goto_gy_house().screenshot()
 
     @allure.description("进入智能推荐右侧的“设置”")
-    def test_click_setting(self):
-        self.shouye.goto_setting().screenshot()
+    def test_click_setting(self, loginf):
+        loginf(self.app._driver)
+        self.shouye.goto_fav_setting().screenshot()
 
     @allure.description("进入智能推荐第一个楼盘")
     def test_click_recommend_first_house(self):
@@ -43,9 +47,28 @@ class TestMain(TestBase):
     def test_click_new(self):
         self.shouye.swipe_to_list().click_tab_new().screenshot()
 
+    @pytest.mark.hello
     @allure.description("进入精选推荐的“综合排序”")
     def test_click_all(self):
         self.shouye.swipe_to_list().click_tab_all().screenshot()
+
+    @pytest.mark.hello
+    @allure.description("查看“我的”页面")
+    def test_goto_my(self):
+        self.shouye.goto_my().screenshot()
+
+    @pytest.mark.hello
+    @allure.description("查看登录状态下的“我的”页面")
+    def test_goto_my_login(self, loginf):
+        loginf(self.app._driver)
+        self.shouye.goto_my().screenshot()
+
+    @pytest.mark.hello
+    @allure.description("查看未登录状态下的“我的”页面")
+    def test_goto_my_logout(self, logoutf):
+        logoutf(self.app._driver)
+        self.shouye.goto_my().screenshot()
+
 
     # @pytest.mark.parametrize("value1, value2", yaml.safe_load(open("./test_main.yaml")))
     # def test_demo(self, value1, value2):

@@ -2,13 +2,14 @@ import allure
 
 from page.base_page import BasePage
 from page.houselist import HouseList
+from page.login import Login
 from page.my import My
 from page.search import Search
 
 
 class Main(BasePage):
     """
-    首页
+    首页，各点击入口
     """
     def goto_adv(self):
         """
@@ -16,8 +17,8 @@ class Main(BasePage):
         :return:
         """
         with allure.step("点击横幅广告"):
-            self.steps("/main.yaml")
-        self.tsleep(1)
+            self.steps("../page/main.yaml")
+        self.tsleep(2)
         return self
 
     def goto_all_house(self):
@@ -26,7 +27,7 @@ class Main(BasePage):
         :return:HouseList
         """
         with allure.step("点击全部"):
-            self.steps("/main.yaml")
+            self.steps("../page/main.yaml")
         return HouseList(self._driver)
 
     def goto_zz_house(self):
@@ -35,7 +36,7 @@ class Main(BasePage):
         :return:HouseList
         """
         with allure.step("点击住宅"):
-            self.steps("/main.yaml")
+            self.steps("../page/main.yaml")
         return HouseList(self._driver)
 
     def goto_sy_house(self):
@@ -44,7 +45,7 @@ class Main(BasePage):
         :return:HouseList
         """
         with allure.step("点击商业"):
-            self.steps("/main.yaml")
+            self.steps("../page/main.yaml")
         return HouseList(self._driver)
 
     def goto_gy_house(self):
@@ -53,16 +54,16 @@ class Main(BasePage):
         :return:HouseList
         """
         with allure.step("点击公寓"):
-            self.steps("/main.yaml")
+            self.steps("../page/main.yaml")
         return HouseList(self._driver)
 
-    def goto_setting(self):
+    def goto_fav_setting(self):
         """
         点击智能推荐右侧的设置
         :return:
         """
         with allure.step("点击智能推荐右侧的设置"):
-            self.steps("/main.yaml")
+            self.steps("../page/main.yaml")
         return self
 
     def goto_recommend_first_house(self):
@@ -71,7 +72,7 @@ class Main(BasePage):
         :return:
         """
         with allure.step("点击智能推荐第一个房源"):
-            self.steps("/main.yaml")
+            self.steps("../page/main.yaml")
         self.tsleep(1)
         return HouseList(self._driver)
 
@@ -81,7 +82,7 @@ class Main(BasePage):
         :return:Search
         """
         with allure.step("点击搜索框"):
-            self.steps("/main.yaml")
+            self.steps("../page/main.yaml")
         return Search(self._driver)
 
     def swipe_to_list(self):
@@ -90,7 +91,7 @@ class Main(BasePage):
         :return:self
         """
         with allure.step("将精选推荐滑动出来"):
-            self.steps("/main.yaml")
+            self.steps("../page/main.yaml")
         return self
 
     def click_tab_new(self):
@@ -99,7 +100,7 @@ class Main(BasePage):
         :return:self
         """
         with allure.step("点击最新上架"):
-            self.steps("/main.yaml")
+            self.steps("../page/main.yaml")
         self.tsleep(1)
         return self
 
@@ -109,7 +110,7 @@ class Main(BasePage):
         :return:self
         """
         with allure.step("点击热门报备"):
-            self.steps("/main.yaml")
+            self.steps("../page/main.yaml")
         self.tsleep(1)
         return self
 
@@ -119,7 +120,7 @@ class Main(BasePage):
         :return:self
         """
         with allure.step("点击综合排序"):
-            self.steps("/main.yaml")
+            self.steps("../page/main.yaml")
         self.tsleep(1)
         return self
 
@@ -129,6 +130,39 @@ class Main(BasePage):
         :return: My(self._driver)
         """
         with allure.step("进入“我的”页面"):
-            self.steps("/main.yaml")
+            self.steps("../page/main.yaml")
         return My(self._driver)
 
+    def goto_custom(self):
+        """
+        点击“客户”
+        :return: My(self._driver)
+        """
+        with allure.step("进入“客户”页面"):
+            self.steps("../page/main.yaml")
+        return
+
+    def goto_message(self):
+        """
+        点击“消息”
+        :return: My(self._driver)
+        """
+        with allure.step("进入“消息”页面"):
+            self.steps("../page/main.yaml")
+        return 
+
+    def goto_index(self):
+        """
+        点击“首页”
+        :return: My(self._driver)
+        """
+        with allure.step("进入“首页”页面"):
+            self.steps("../page/main.yaml")
+        return self
+
+    def goto_login(self):
+        """
+        去登录
+        :return:
+        """
+        return Login(self._driver)

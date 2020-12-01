@@ -27,7 +27,8 @@ class BasePage:
         """
         self._driver.implicitly_wait(sec)
 
-    def screenshot(self, name = "tmp.png"):
+    def screenshot(self, name="tmp.png"):
+        self.tsleep(2)  # 等待两秒，让页面加载完成后截图
         self._driver.save_screenshot(name)
         with open(name, "rb") as f:
             content = f.read()
@@ -89,7 +90,8 @@ class BasePage:
 
     def steps(self, path, name=None, replace=False):
         with open(path, encoding="utf-8") as f:
-            name = inspect.stack()[1].function  # 可以不通过name来传参，而使用调用的函数名称
+            if name is None:
+                name = inspect.stack()[1].function  # 可以不通过name来传参，而使用调用的函数名称
             steps = yaml.safe_load(f)[name]
             print(steps)
 
@@ -104,20 +106,28 @@ class BasePage:
             if "action" in step.keys():
                 action = step["action"]
                 if "click" == action:
+                    # 点击事件
                     self.find(step["by"], step["locator"]).click()
                 if "send" == action:
+                    # 发送文本
                     value = step["value"]
                     self.find(step["by"], step["locator"]).send_keys(value)
                     print(f"send({value})")
                 if "press" == action:
+                    # 按键操作
                     value = step["value"]
                     self._driver.press_keycode(value)
                 if "swipe" == action:
+                    # 向下滑动操作
                     value = step["value"]
                     if "buttom" != value:
                         self.swipe_to_buttom(value)
                     else:
                         self.swipe_to_buttom()
+                if "len>0" == action:
+                    # 查找元素是否存在
+                    ele = self.finds(step["by"], step["locator"])
+                    return len(ele) > 0
 
     def back(self):
         self._driver.back()
