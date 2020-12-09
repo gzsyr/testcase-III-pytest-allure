@@ -1,0 +1,17 @@
+# 点击“编辑”按钮
+goto_edit_customer:
+  - by: xpath
+    locator: '//*[@text="编辑"]'
+    action: click
+
+# 点击“拨打电话”按钮
+goto_call_phone:
+  - by: id
+    locator: 'customer_detail_call_img'
+    action: click
+
+# 点击报备动态
+goto_sign_detail:
+  - by: id
+    locator: 'item_child_customer_detail_rl'
+    action: click

@@ -4,7 +4,9 @@ from test_case.test_base import TestBase
 
 
 class TestHouseDetail(TestBase):
-
+    """
+    楼盘详情页面的测试用例
+    """
     @allure.description("搜索进入楼盘详情页面")
     def test_goto_house_detail(self):
         self.shouye.goto_search().action_search("滨江雅园").select_search_result().screenshot()

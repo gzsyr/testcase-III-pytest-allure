@@ -44,7 +44,7 @@ goto_my_favourite:
 goto_authentication:
   - by: xpath
     locator: '//*[@text="认证"]'
-    - action: click
+    action: click
 
 # 点击“认证”
 goto_coupon:

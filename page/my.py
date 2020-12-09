@@ -3,9 +3,9 @@ import allure
 from page.base_page import BasePage
 from page.mycustomer import MyCustomer
 from page.myshop import MyShop
-from page.reportlist import ReportList
 from page.setting import Setting
 from page.moreservice import MoreService
+from page.signlist import SignList
 
 
 class My(BasePage):
@@ -46,7 +46,7 @@ class My(BasePage):
         """
         with allure.step("点击“签约量”"):
             self.steps("../page/my.yaml")
-        return ReportList(self._driver)
+        return SignList(self._driver)
 
     def goto_deal_num(self):
         """
@@ -55,7 +55,7 @@ class My(BasePage):
         """
         with allure.step("点击“成交额”"):
             self.steps("../page/my.yaml")
-        return ReportList(self._driver)
+        return SignList(self._driver)
 
     def goto_my_shop(self):
         """

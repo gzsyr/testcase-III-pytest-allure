@@ -73,3 +73,12 @@ class Setting(BasePage):
             self.steps("../page/setting.yaml")
         return self
 
+    def back_to_my(self):
+        """
+        设置页面，点击物理键返回，回到我的页面
+        :return:
+        """
+        with allure.step("返回回到我的页面"):
+            self.back()
+        from page.my import My
+        return My(self._driver)

@@ -1,0 +1,23 @@
+# 点击第一个客户，进入客户详情
+goto_customer_detail:
+  - by: id
+    locator: 'customer_list_ll'
+    action: click
+
+# 点击第一个客户的拨打电话按钮
+click_phone:
+  - by: id
+    locator: 'customer_list_call_img'
+    action: click
+
+# 点击搜索按钮
+goto_search_customer:
+  - by: id
+    locator: 'layout_nav_right'
+    action: click
+
+# 点击添加客户按钮
+goto_add_customer:
+  - by: id
+    locator: 'tv_nav_right'
+    action: click

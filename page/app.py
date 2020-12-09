@@ -20,6 +20,9 @@ class App(BasePage):
             caps["deviceName"] = "127.0.0.1:62001"
             caps["automationName"] = "UiAutomator1"
             caps["platformVersion"] = "7.1.2"
+            # caps["platformName"] = "android"
+            # caps["deviceName"] = "JTK5T20318000225"
+            # caps["platformVersion"] = "10.0.0"
             caps["appPackage"] = self._package
             caps["appActivity"] = self._activity
             caps["noReset"] = True

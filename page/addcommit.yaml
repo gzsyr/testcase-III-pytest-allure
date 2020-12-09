@@ -1,0 +1,9 @@
+# 填写备注，点击“提交”
+submit_commit:
+  - by: xpath
+    locator: '//*[@text="请填写备注内容"]'
+    action: send
+    value: "${commit}"
+  - by: xpath
+    locator: '//*[@text="提交"]'
+    action: click

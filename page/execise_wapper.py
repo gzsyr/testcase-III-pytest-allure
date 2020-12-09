@@ -36,7 +36,7 @@ def handle_black(func):
             return element
         except Exception as e:
             logging.error("element not find, handle black list")
-            instance.screenshot("tmp.png")
+
             # with open("tmp.png", "rb") as f:
             #     content = f.read()
             # allure.attach(content, attachment_type=allure.attachment_type.PNG)
@@ -44,6 +44,7 @@ def handle_black(func):
             instance.set_implicity(1)
 
             if _error_num > _max_num:
+                instance.screenshot("tmp.png")
                 raise e
             _error_num += 1
 
@@ -52,5 +53,7 @@ def handle_black(func):
                 if len(elelist) > 0:
                     elelist[0].click()
                     return wapper(*args, **kwargs)
+
+            instance.screenshot("tmp.png")
             raise e
     return wapper

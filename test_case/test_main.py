@@ -7,6 +7,9 @@ from test_case.test_base import TestBase
 
 
 class TestMain(TestBase):
+    """
+    首页的用例
+    """
 
     # shouye = App().start().main()
 

@@ -1,0 +1,10 @@
+# 填写客户姓名、手机号、性别
+input_customer_info:
+  - by: xpath
+    locator: '//*[@text="请输入客户姓名"]'
+    action: send
+    value: '${sign_name}'
+  - by: xpath
+    locator: '//*[@text="请输入客户手机号码"]'
+    action: send
+    value: '${sign_phone}'

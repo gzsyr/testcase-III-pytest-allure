@@ -1,0 +1,35 @@
+# 点击第一个客户，进入客户详情页面
+goto_customer_detail:
+  - by: id
+    locator: 'customer_name'
+    action: click
+
+# 点击第一个客户的拨打电话按钮
+click_phone:
+  - by: id
+    locator: 'tel_customer_detail'
+    action: click
+
+# 点击第一个客户后面“+”添加报备楼盘按钮
+add_sign_house:
+  - by: id
+    locator: 'add_customer_detail'
+    action: click
+
+# 点击报备信息，进入报备详情页面
+goto_sign_detail:
+  - by: id
+    locator: 'customer_building'
+    action: click
+
+# 点击右上角搜索
+goto_search_customer:
+  - by: id
+    locator: 'layout_nav_right'
+    action: click
+
+# 点击右上角筛选按钮
+goto_filter_customer:
+  - by: id
+    locator: 'ib_nav_right'
+    action: click

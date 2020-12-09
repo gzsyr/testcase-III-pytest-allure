@@ -1,6 +1,7 @@
 import allure
 
 from page.base_page import BasePage
+from page.customer import Customer
 from page.houselist import HouseList
 from page.login import Login
 from page.my import My
@@ -140,7 +141,7 @@ class Main(BasePage):
         """
         with allure.step("进入“客户”页面"):
             self.steps("../page/main.yaml")
-        return
+        return Customer(self._driver)
 
     def goto_message(self):
         """

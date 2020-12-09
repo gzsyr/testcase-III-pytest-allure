@@ -1,0 +1,59 @@
+# 点击“我的客户”
+goto_my_customer:
+  - by: xpath
+    locator: '//*[@text="我的客户"]'
+    action: click
+
+# 点击“我的报备”
+goto_sign_list:
+  - by: xpath
+    locator: '//*[@text="我的报备"]'
+    action: click
+
+# 点击“添加客户”
+goto_add_customer:
+  - by: xpath
+    locator: '//*[@text="添加客户"]'
+    action: click
+
+# 点击“快速报备”
+goto_sign_customer:
+  - by: xpath
+    locator: '//*[@text="快速报备"]'
+    action: click
+
+# 点击“搜索”
+goto_search_customer:
+  - by: id
+    locator: 'ib_customers_search'
+    action: click
+
+# 点击“筛选”
+goto_filter_customer:
+  - by: id
+    locator: 'ib_customers_choice'
+    action: click
+
+# 点击“最近报备”的第一条数据
+goto_customer_detail:
+  - by: id
+    locator: 'tv_report_customer'
+    action: click
+
+# 点击“最近报备”第一条的“+”号
+goto_sign_house:
+  - by: id
+    locator: 'add_customer_detail'
+    action: click
+
+# 点击“最近报备”第一条的“电话”
+click_call:
+  - by: id
+    locator: 'tel_customer_detail'
+    action: click
+
+# 点击“最近报备”第一条的报备信息
+goto_sign_detail:
+  - by: id
+    locator: 'customer_state'
+    action: click
