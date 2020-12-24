@@ -36,6 +36,7 @@ class TestSetting(TestBase):
     def test_about(self):
         self.shouye.goto_my().goto_setting().goto_about().screenshot()
 
-    @allure.description("进入“关于”")
+    @allure.description("从设置页面回到我的页面")
     def test_back_to_my(self):
-        self.shouye.goto_my().goto_setting().back_to_my()
+        my = self.shouye.goto_my()
+        my.goto_setting().back(my)

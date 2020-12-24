@@ -148,13 +148,17 @@ class BasePage:
                     ele = self.finds(step["by"], step["locator"])
                     return len(ele) > 0
 
-    def back(self):
+    def back(self, c_name=None):
         """
-        返回上一级页面
+        点击返回
+        :param c_name: 类的实例：1、默认为None，返回为self；2、不为None，则返回c_name
         :return:
         """
         self._driver.back()
-        return self
+        if c_name is None:
+            return self
+        else:
+            return c_name
 
     def tsleep(self, sec):
         time.sleep(sec)

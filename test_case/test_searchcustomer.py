@@ -16,7 +16,8 @@ class TestSearchCustome(TestBase):
             goto_my_customer().\
             goto_search_customer().\
             search_customer(name).\
-            select_customer_name_result()
+            select_customer_name_result().\
+            screenshot()
 
     @allure.description("客户->搜索->输入关键词搜索")
     @pytest.mark.parametrize("name", ["测试", "淘房"])
@@ -25,4 +26,5 @@ class TestSearchCustome(TestBase):
             goto_custom().\
             goto_search_customer().\
             search_customer(name).\
-            select_customer_sign_result()
+            select_customer_sign_result().\
+            screenshot()

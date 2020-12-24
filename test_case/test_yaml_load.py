@@ -1,7 +1,7 @@
 import yaml
 
 
-def test_replace():
+def replace():
     """替换字符串"""
     _params = {"name": "12344"}
     ss = "xxxxxxxxxxxx ${name} lllllllll"
@@ -9,7 +9,7 @@ def test_replace():
         ss = ss.replace(f'${{{key}}}', value)
     print(ss)
 
-def test_yaml_load(path, name):
+def yaml_load(path, name):
     with open(path, encoding="utf-8") as f:
         steps = yaml.safe_load(f)[name]
         print(steps)

@@ -19,32 +19,37 @@ class TestSignList(TestBase):
         self.shouye.\
             goto_custom().\
             goto_sign_list().\
-            click_phone()
+            click_phone().\
+            screenshot()
 
     @allure.description("报备列表中，点击第一条数据的添加报备楼盘按钮")
     def test_goto_add_sign_house(self):
         self.shouye.\
             goto_custom().\
             goto_sign_list().\
-            add_sign_house()
+            add_sign_house().\
+            screenshot()
 
     @allure.description("报备列表中，点击第一条数据下方的第一条报备楼盘")
     def test_goto_sign_detail(self):
         self.shouye.\
             goto_custom().\
             goto_sign_list().\
-            goto_sign_detail()
+            goto_sign_detail().\
+            screenshot()
 
     @allure.description("报备列表中，点击右上角搜索按钮")
     def test_click_search(self):
         self.shouye.\
             goto_custom().\
             goto_sign_list().\
-            goto_search_customer()
+            goto_search_customer().\
+            screenshot()
 
     @allure.description("报备列表中，点击右上角筛选按钮")
     def test_click_filter(self):
         self.shouye. \
             goto_custom(). \
             goto_sign_list(). \
-            goto_filter_customer()
+            goto_filter_customer().\
+            screenshot()

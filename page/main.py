@@ -4,7 +4,9 @@ from page.base_page import BasePage
 from page.customer import Customer
 from page.houselist import HouseList
 from page.login import Login
+from page.message import Message
 from page.my import My
+from page.newsdynamic import NewsDynamic
 from page.search import Search
 
 
@@ -61,7 +63,7 @@ class Main(BasePage):
     def goto_fav_setting(self):
         """
         点击智能推荐右侧的设置
-        :return:
+        :return: self
         """
         with allure.step("点击智能推荐右侧的设置"):
             self.steps("../page/main.yaml")
@@ -70,12 +72,21 @@ class Main(BasePage):
     def goto_recommend_first_house(self):
         """
         点击智能推荐第一个房源
-        :return:
+        :return: HouseList(self._driver)
         """
         with allure.step("点击智能推荐第一个房源"):
             self.steps("../page/main.yaml")
         self.tsleep(1)
         return HouseList(self._driver)
+
+    def goto_news_dynamic(self):
+        """
+        点击“项目资讯”
+        :return:
+        """
+        with allure.step("点击“项目资讯”"):
+            self.steps("../page/main.yaml")
+        return NewsDynamic(self._driver)
 
     def goto_search(self):
         """
@@ -137,7 +148,7 @@ class Main(BasePage):
     def goto_custom(self):
         """
         点击“客户”
-        :return: My(self._driver)
+        :return: Customer(self._driver)
         """
         with allure.step("进入“客户”页面"):
             self.steps("../page/main.yaml")
@@ -146,16 +157,16 @@ class Main(BasePage):
     def goto_message(self):
         """
         点击“消息”
-        :return: My(self._driver)
+        :return: Message(self._driver)
         """
         with allure.step("进入“消息”页面"):
             self.steps("../page/main.yaml")
-        return 
+        return Message(self._driver)
 
     def goto_index(self):
         """
         点击“首页”
-        :return: My(self._driver)
+        :return: self
         """
         with allure.step("进入“首页”页面"):
             self.steps("../page/main.yaml")
@@ -164,6 +175,6 @@ class Main(BasePage):
     def goto_login(self):
         """
         去登录
-        :return:
+        :return: Login(self._driver)
         """
         return Login(self._driver)

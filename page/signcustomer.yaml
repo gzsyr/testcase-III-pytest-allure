@@ -1,4 +1,4 @@
-# 填写客户姓名、手机号、性别
+# 填写客户姓名、手机号、性别、备注
 input_customer_info:
   - by: xpath
     locator: '//*[@text="请输入客户姓名"]'
@@ -8,3 +8,22 @@ input_customer_info:
     locator: '//*[@text="请输入客户手机号码"]'
     action: send
     value: '${sign_phone}'
+  - by: xpath
+    locator: '//*[@text="${sign_sex}"]'
+    action: click
+  - by: xpath
+    locator: '//*[@text="请填写备注内容"]'
+    action: send
+    value: '${sign_commit}'
+
+# 点击“提交”
+click_send:
+  - by: xpath
+    locator: '//*[@text="提交"]'
+    action: click
+
+# 点击报备楼盘
+goto_sign_house:
+  - by: xpath
+    locator: '//*[@text="请选择楼盘"]'
+    action: click

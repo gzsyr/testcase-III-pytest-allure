@@ -1,4 +1,4 @@
-import os
+# 执行用例的主入口
 
 import pytest
 
@@ -8,12 +8,13 @@ if __name__ == "__main__":
 
     pytest.main(["-v",
                  "-s",
+                 "-rs",
                  "--show-capture=all",
                  "--alluredir", "./result",  ##"--html=testreport.html", "--self-contained-html",
                  # "./test_house_detail.py",
                  # "./test_main.py::TestMain::test_goto_my",
                  # "./test_my.py",
-                 "./test_customer.py",
+                 #"./test_customer.py",
                  # "-m hello"
                  ])
 

@@ -33,7 +33,7 @@ class TestMy(TestBase):
 
     @allure.description("点击“认证”")
     def test_my_auth(self):
-        self.shouye.goto_my().goto_authentication().screenshot()  #
+        self.shouye.goto_my().goto_authentication().screenshot()
 
     @allure.description("点击“带看券”")
     def test_my_coupon(self):

@@ -1,0 +1,12 @@
+# 点击“点赞”
+click_like:
+  - by: xpath
+    locator: '//*[@text="点赞" or @text="已赞"]'
+    action: click
+
+# 点击“评论”
+click_commit:
+  - by: xpath
+    locator: '//*[@text="评论"]'
+    action: send
+    value: '${commit_content}'

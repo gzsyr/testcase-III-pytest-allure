@@ -1,0 +1,17 @@
+# 点击“客户提醒”
+click_customer_remind:
+  - by: xpath
+    locator: '//*[@text="客户提醒"]'
+    action: click
+
+# 点击“系统消息”
+click_system_message:
+  - by: xpath
+    locator: '//*[@text="系统消息"]'
+    action: click
+
+# 点击“楼盘动态”
+click_house_dynamic:
+  - by: xpath
+    locator: '//*[@text="楼盘动态"]'
+    action: click

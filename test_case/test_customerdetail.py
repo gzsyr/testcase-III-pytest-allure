@@ -1,4 +1,5 @@
 import allure
+import pytest
 
 from test_case.test_base import TestBase
 
@@ -10,6 +11,7 @@ class TestCustomerDetail(TestBase):
         使用华为Mate30真机，可以执行
         原因待确认
     """
+    @pytest.mark.skip
     @allure.description("点击客户详情的“编辑”按钮")
     def test_click_edit(self):
         self.shouye\

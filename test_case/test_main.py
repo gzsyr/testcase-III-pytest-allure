@@ -34,8 +34,8 @@ class TestMain(TestBase):
         self.shouye.goto_gy_house().screenshot()
 
     @allure.description("进入智能推荐右侧的“设置”")
-    def test_click_setting(self, loginf):
-        loginf(self.app._driver)
+    def test_click_setting(self):    # , loginf):
+        # loginf(self.app._driver)
         self.shouye.goto_fav_setting().screenshot()
 
     @allure.description("进入智能推荐第一个楼盘")
@@ -50,23 +50,21 @@ class TestMain(TestBase):
     def test_click_new(self):
         self.shouye.swipe_to_list().click_tab_new().screenshot()
 
-    @pytest.mark.hello
     @allure.description("进入精选推荐的“综合排序”")
     def test_click_all(self):
         self.shouye.swipe_to_list().click_tab_all().screenshot()
 
-    @pytest.mark.hello
     @allure.description("查看“我的”页面")
     def test_goto_my(self):
         self.shouye.goto_my().screenshot()
 
-    @pytest.mark.hello
+    @pytest.mark.skip(reason="当前登录状态")
     @allure.description("查看登录状态下的“我的”页面")
     def test_goto_my_login(self, loginf):
         loginf(self.app._driver)
         self.shouye.goto_my().screenshot()
 
-    @pytest.mark.hello
+    @pytest.mark.skip(reason="仅执行登录状态下的用例")
     @allure.description("查看未登录状态下的“我的”页面")
     def test_goto_my_logout(self, logoutf):
         logoutf(self.app._driver)

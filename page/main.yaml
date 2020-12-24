@@ -92,3 +92,9 @@ goto_index:
   - by: id
     locator: 'index_image'
     action: click
+
+# 点击“项目动态”
+goto_news_dynamic:
+  - by: id
+    locator: 'layout_marquee_index'
+    action: click
