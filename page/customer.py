@@ -106,3 +106,4 @@ class Customer(BasePage):
             self.steps("../page/customer.yaml")
         return SignDetail(self._driver)
 
+
