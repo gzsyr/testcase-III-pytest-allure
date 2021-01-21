@@ -1,3 +1,17 @@
 测试使用github方法
 
 更新当前文件到github~
+
+使用步骤：
+1、下载git：
+https://git-scm.com/download/win
+2、在pycharm中配置git：
+File->Settings->Version Control->Git->"Path to Git executale"：输入git安装路径下的exe
+3、配置github：
+File->Settings->Version Control->Github->"+"->"Log In via GitHub..."，进入github浏览器页面进行认证
+认证通过后，在此页面会显示github.com的账号
+注意：通过github网页直接注册
+4、上传文件：
+配置无须上传的文件（比如：项目运行生成的文件等）：gitignore
+
+pycharm标题栏会有“Git”选项，选择勾勾，进入进行上传，在commit的时候选择“commit and push”会同步上传到github
